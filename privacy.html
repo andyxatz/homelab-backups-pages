@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Homelab Backups</title>
+  <style>
+    :root { color-scheme: light dark; font: 1rem/1.65 system-ui, sans-serif; }
+    body { max-width: 46rem; margin: 10vh auto; padding: 0 1.25rem; }
+    h1, h2 { line-height: 1.2; }
+    a { color: #4b8bf4; }
+  </style>
+</head>
+<body>
+  <main>
+    <p><a href="/">Home</a></p>
+    <h1>Privacy Policy — Homelab Backups</h1>
+    <p><strong>Last updated: October 12, 2026</strong></p>
+    <p>Homelab Backups is a privately operated tool for backing up and restoring its operator’s personal homelab data. It is not offered to the public, and it does not collect data from public users through this website.</p>
+
+    <h2>Google Drive access</h2>
+    <p>The tool uses rclone with Google’s <code>drive.file</code> permission. That permission covers specific Drive files used with the app; it does not grant general access to every file in the account. The tool uses that access to store, read, and manage its backup repository for backup and recovery operations.</p>
+
+    <h2>Backup contents and protection</h2>
+    <p>The repository is designed to hold application backup data, not media libraries. Restic encrypts repository data before it is uploaded to Google Drive. Google Drive may still process file metadata needed to store and manage those files.</p>
+
+    <h2>Credentials and storage</h2>
+    <p>OAuth credentials and the Restic repository password are managed through a secrets manager and supplied to the private backup host, where runtime files are restricted to the host administrator. The repository does not document a fixed retention period; backups are retained or removed under the operator’s backup policy.</p>
+
+    <h2>Sharing and service providers</h2>
+    <p>Backup contents are not made public or shared with other users. Google provides the Drive storage. A secrets-management provider handles credentials, but does not receive the backup repository as part of the documented design. GitHub Pages hosts this public information site; Cloudflare provides DNS for its domain. Those services are not used to process backup contents.</p>
+
+    <h2>Access revocation and questions</h2>
+    <p>The operator can revoke the app’s Drive access through Google Account security settings. This tool has no public user accounts or public contact form.</p>
+  </main>
+</body>
+</html>
